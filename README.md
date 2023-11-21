@@ -15,13 +15,13 @@ Module 10 Homework Challenge <br></b><br>
 2. Use the SQLAlchemy create_engine() function to connect to your SQLite database <br>
 3. Use the SQLAlchemy automap_base() function to reflect your tables into classes, and then save references to the classes named (station) and (measurement). <br>
 4. Link Python to the database by creating a SQLAlchemy session. <br>
-   <tab><tab><tab><b> *IMPORTANT: Remember to close your session at the end of your notebook* </b><br>
+   <tab><tab><tab><b> IMPORTANT: Remember to close your session at the end of your notebook</b><br>
 5. Perform a precipitation analysis and then a station analysis by completing the steps in the following two subsections.<br>
 
 <b>PERCIPITATION ANALYSIS</b><br>
 1. Find the most recent date in the dataset. <br>
 2. Using that date, get the previous 12 months of precipitation data by querying the previous 12 months of data. <br>
-    <tab><tab><tab><b>*HINT: Don't pass the date as a variable to your query*</b><br>
+    <tab><tab><tab><b>HINT: Don't pass the date as a variable to your query</b><br>
 3. Select only the "date" and "prcp" values. <br>
 4. Load the query results into a Pandas DataFrame. Explicitly set the column names.<br>
 5. Sort the DataFrame values by "date". <br>
@@ -32,12 +32,15 @@ Module 10 Homework Challenge <br></b><br>
 
 <b>STATION ANALYSIS </b><br> 
 1. Design a query to calculate the total number of stations in the dataset. <br>
+
 2. Design a query to find the most-active stations (that is, the stations that have the most rows). To do so, complete the following steps: <br>
-    <tab><tab> 2a. List the stations and observation counts in descending order. <br>
-        <tab><tab><tab><b>*HINT: You’ll need to use the [func.count] function in your query*</b><br>
-    <tab><tab> 2b. Answer the following question: which station id has the greatest number of observations? <br>
+ <tab><tab> 2a. List the stations and observation counts in descending order. <br>
+<tab><tab><tab><b>HINT: You’ll need to use the [func.count] function in your query</b><br>
+<tab><tab> 2b. Answer the following question: which station id has the greatest number of observations? <br>
+    
 3. Design a query that calculates the lowest, highest, and average temperatures that filters on the most-active station id found in the previous query. <br>
-    <tab><tab><tab><b>*HINT: You’ll need to use functions such as [func.min], [func.max], and [func.avg] in your query.*</b><br>
+    <tab><tab><tab><b>HINT: You’ll need to use functions such as [func.min], [func.max], and [func.avg] in your query.</b><br>
+    
 4. Design a query to get the previous 12 months of temperature observation (TOBS) data. To do so, complete the following steps:<br>
     <tab><tab>4a. Filter by the station that has the greatest number of observations. <br>
     <tab><tab>4b. Query the previous 12 months of TOBS data for that station. <br>
@@ -67,8 +70,8 @@ Now that you’ve completed your initial analysis, you’ll design a Flask API b
    <tab><tab> 5a. Return a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start or start-end range. <br>
    <tab><tab> 5b. For a specified start, calculate [TMIN], [TAVG], and [TMAX] for all the dates greater than or equal to the start date. <br>
    <tab><tab> 5c. For a specified start date and end date, calculate [TMIN], [TAVG], and [TMAX] for the dates from the start date to the end date, inclusive. <br>
-   <tab><tab><tab><b>*HINTS:Join the station and measurement tables for some of the queries.*</b><br>
-   <tab><tab><tab><b>*HINTS:Use the Flask [jsonify] function to convert your API data to a valid JSON response object.*</b><br>
+   <tab><tab><tab><b>HINTS:Join the station and measurement tables for some of the queries.</b><br>
+   <tab><tab><tab><b>HINTS:Use the Flask [jsonify] function to convert your API data to a valid JSON response object.</b><br>
 
 <br><br>
 
@@ -93,7 +96,7 @@ To receive all points, you must: <br>
 <br><br>
 
 
-<head><b> Precipitation Analysis (16 points) </head></b><br>
+<head><b> Precipitation Analysis (16 points) </b></head><br>
   
 To receive all points, you must: <br>
   
@@ -110,6 +113,8 @@ To receive all points, you must: <br>
 <tab><tab> F. Use Pandas to print the summary statistics for the precipitation data <b>(2 points) </b>
 
 <br><br>
+
+
 
 <head><b> Station Analysis (16 points) </b></head><br>
 To receive all points, you must:<br>
@@ -148,18 +153,19 @@ To receive all points, your Flask application must:<br>
 
 
 <head><b>API Static Routes (15 points)</b></head><br>
-To receive all points, your Flask application must include:<br>
+
+To receive all points, your Flask application must include:<br><br>
 
 -A <b>precipitation route</b> that:<br>
-    <tab><tab> A) Returns json with the date as the key and the value as the precipitation <b>(3 points)</b><br>
-    <tab><tab> B) Only returns the jsonified precipitation data for the last year in the database <b>(3 points)</b><br>
+    <tab><tab>A) Returns json with the date as the key and the value as the precipitation <b>(3 points)</b><br>
+    <tab><tab>B) Only returns the jsonified precipitation data for the last year in the database <b>(3 points)</b><br>
 
 -A <b>stations route</b> that: <br>
-    <tab><tab> A) Returns jsonified data of all of the stations in the database <b>(3 points)</b><br>
+    <tab><tab>A) Returns jsonified data of all of the stations in the database <b>(3 points)</b><br>
 
 -A <b>tobs route</b> that: <br>
-    <tab><tab> A) Returns jsonified data for the most active station (USC00519281) <b>(3 points)</b><br>
-    <tab><tab> B) Only returns the jsonified data for the last year of data <b>(3 points)</b><br><br>
+    <tab><tab>A) Returns jsonified data for the most active station (USC00519281) <b>(3 points)</b><br>
+    <tab><tab>B) Only returns the jsonified data for the last year of data <b>(3 points)</b><br><br>
 
     
 
@@ -168,12 +174,12 @@ To receive all points, your Flask application must include:<br>
 To receive all points, your Flask application must include:<br>
 
 -A <b>start route</b> that: <br>
-    <tab><tab> A) Accepts the start date as a parameter from the URL <b>(2 points)</b><br>
-    <tab><tab> B) Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset <b>(4 points)</b><br>
+    <tab><tab>A) Accepts the start date as a parameter from the URL <b>(2 points)</b><br>
+    <tab><tab>B) Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset <b>(4 points)</b><br>
 
 -A <b>start/end route</b> that:<br>
-    <tab><tab> A) Accepts the start and end dates as parameters from the URL <b>(3 points)</b><br>
-    <tab><tab> B) Returns the min, max, and average temperatures calculated from the given start date to the given end date <b>(6 points)</b><br><br>
+    <tab><tab>A) Accepts the start and end dates as parameters from the URL <b>(3 points)</b><br>
+    <tab><tab>B) Returns the min, max, and average temperatures calculated from the given start date to the given end date <b>(6 points)</b><br><br>
 
     
 
