@@ -5,7 +5,7 @@ Module 10 Homework Challenge <br></b><br>
 
 <br><br>
 
-<b><fontdecoration: underline solid>PART 1:</u> <u>ANALYZE & EXPLORE THE CLIMATE DATA</font></b><br>
+<b><font size=18>PART 1:</u> <u>ANALYZE & EXPLORE THE CLIMATE DATA</font size></b><br>
 
 In this section, you’ll use Python and SQLAlchemy to do a basic climate analysis and data exploration of your climate database. Specifically, you’ll use SQLAlchemy ORM queries, Pandas, and Matplotlib. 
 
