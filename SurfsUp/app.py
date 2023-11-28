@@ -160,7 +160,7 @@ def tobs():
 @app.route("/api/v1.0/<start>")
 @app.route("/api/v1.0/<start>/<end>")
 
-def determine_temps(start=None, end=None)
+def determine_temps(start=None, end=None):
     
     #Create session.
     session = Session(engine)
