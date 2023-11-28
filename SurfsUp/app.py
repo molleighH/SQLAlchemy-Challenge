@@ -16,7 +16,7 @@ from flask import Flask, jsonify
 #################################################
 
 #Create engine to hawaii.sqlite
-engine = create_engine("sqlite:///../Resources/hawaii.sqlite")
+engine = create_engine("sqlite:///hawaii.sqlite")
 
 #Reflect an existing database into a new model
 Base = automap_base()
@@ -192,7 +192,7 @@ def determine_temps(start=None, end=None)
         return jsonify(start_end_list)
     #Close session.
     session.close()
-    
+
 #HINTS:Join the station and measurement tables for some of the queries.
 #HINTS:Use the Flask [jsonify] function to convert your API data to a valid JSON response object.
         
