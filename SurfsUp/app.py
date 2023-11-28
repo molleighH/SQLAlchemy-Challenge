@@ -1,5 +1,5 @@
 # Import the dependencies.
-import numpy as np
+import numpy as pd
 import pandas as pd
 import datetime as dt
 import re
@@ -16,7 +16,7 @@ from flask import Flask, jsonify
 #################################################
 
 #Create engine to hawaii.sqlite
-engine = create_engine("sqlite:///hawaii.sqlite")
+engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
 #Reflect an existing database into a new model
 Base = automap_base()
