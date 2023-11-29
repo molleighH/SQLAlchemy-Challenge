@@ -25,7 +25,7 @@ Base.prepare(autoload_with=engine)
 Station = Base.classes.station
 Measurement = Base.classes.measurement
 
-#Create our session (link) from Python to the DB
+#Create our session (link) from Python to the DB  
 session = Session(engine)
 
 #################################################
