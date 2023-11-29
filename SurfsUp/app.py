@@ -1,17 +1,21 @@
 # Import the dependencies.
-from flask import Flask, jsonify
+
 import numpy as np
 import pandas as pd
+import datetime as dt
+import re
+
+# Python SQL toolkit and Object Relational Mapper
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.inspection import inspect
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-import datetime as dt
+from flask import Flask, jsonify
 
 #################################################
 # Database Setup
 #################################################
-
 #Create engine to hawaii.sqlite
 engine = create_engine("sqlite:///hawaii.sqlite")
 
